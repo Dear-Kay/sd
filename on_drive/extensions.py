@@ -5,6 +5,21 @@ w = base64.b64decode(("c2Qtd2VidWk=").encode('ascii')).decode('ascii')
 webui_dir = f'/content/{sdw}'
 gwebui_dir = f'/content/drive/MyDrive/{sdw}'
 
+# adetailer
+os.system(f"rm -rf {gwebui_dir}/extensions/adetailer")
+os.system(f"git clone https://github.com/Bing-su/adetailer {gwebui_dir}/extensions/adetailer")
+os.system(f"git -C {gwebui_dir}/extensions/adetailer reset --hard && git -C {gwebui_dir}/extensions/adetailer pull")
+
+# sd-dynamic-thresholding
+os.system(f"rm -rf {gwebui_dir}/extensions/sd-dynamic-thresholding")
+os.system(f"git clone https://github.com/mcmonkeyprojects/sd-dynamic-thresholding {gwebui_dir}/extensions/sd-dynamic-thresholding")
+os.system(f"git -C {gwebui_dir}/extensions/sd-dynamic-thresholding reset --hard && git -C {gwebui_dir}/extensions/sd-dynamic-thresholding pull")
+
+# {w}-segment-anything
+os.system(f"rm -rf {gwebui_dir}/extensions/{w}-segment-anything")
+os.system(f"git clone https://github.com/continue-revolution/{w}-segment-anything {gwebui_dir}/extensions/{w}-segment-anything")
+os.system(f"git -C {gwebui_dir}/extensions/{w}-segment-anything reset --hard && git -C {gwebui_dir}/extensions/{w}-segment-anything pull")
+
 # deforum-for-automatic1111-webui
 os.system(f"rm -rf {gwebui_dir}/extensions/deforum-for-automatic1111-webui")
 os.system(f"git clone https://github.com/deforum-art/deforum-for-automatic1111-webui {gwebui_dir}/extensions/deforum-for-automatic1111-webui")
